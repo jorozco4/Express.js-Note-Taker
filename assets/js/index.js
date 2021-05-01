@@ -4,6 +4,7 @@ const $saveNoteBtn = $(".save-note");
 const $newNoteBtn = $(".new-note");
 const $noteList = $(".list-container .list-group");
 
+//This step oversees noes in the text area.
 let activeNote = {};
 
 const getNotes = () => {
@@ -61,9 +62,9 @@ const handleNoteDelete = (event) => {
 
   const note = $(this).parent(".list-group-item").data();
 
-  if (activeNote.id === note.id) {
-    activeNote = {};
-  }
+  // if (activeNote.id === note.id) {
+  //   activeNote = {};
+  // }
 
   deleteNote(note.id).then(function () {
     getAndRenderNotes();
@@ -110,6 +111,7 @@ const renderNoteList = (notes) => {
   $noteList.append(noteListItems);
 };
 
+//Renders notes to the sidebar
 const getAndRenderNotes = () => {
   return getNotes().then(renderNoteList);
 };
@@ -121,4 +123,5 @@ $noteList.on("click", ".delete-note", handleNoteDelete);
 $noteTitle.on("keyup", handleRenderSaveBtn);
 $noteText.on("keyup", handleRenderSaveBtn);
 
+//Renders the list of notes
 getAndRenderNotes();
