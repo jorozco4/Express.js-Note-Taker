@@ -18,6 +18,10 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ![image](https://user-images.githubusercontent.com/61666288/116767231-f019af80-a9fc-11eb-9807-1e81632bee05.png)
 
+## Installation
+
+This app is installed by using mysql, heroku, create a localhost, "server.js,require, inquirer, and fs.
+
 ## Contact Info
 
 GitHub Username: jorozco4
